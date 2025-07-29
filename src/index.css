@@ -1,13 +1,47 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.primary-color{
+  @apply text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-pink-400 inline-block;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+  background-color: black;
+}
+.bg-primary-color{
+  @apply  bg-gradient-to-r from-orange-400 to-pink-400 inline-block;
+}
+.type-animation-color {
+  @apply text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-green-500 inline-block;
+}
+/* Smooth transitions globally */
+* {
+  transition: all 0.3s ease-in-out;
+  scroll-behavior: smooth;
+}
+
+/* Add soft scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #fb923c, #ec4899);
+  border-radius: 6px;
+}
+
+/* Hover effect enhancement */
+.hover-glow:hover {
+  box-shadow: 0 0 15px rgba(252, 165, 165, 0.4), 0 0 30px rgba(251, 146, 60, 0.5);
+}
+
+/* Button interaction effect */
+.button-effect {
+  @apply transform transition-transform duration-300 hover:scale-105 hover:shadow-lg;
+}
+html {
+  scroll-behavior: smooth;
 }
