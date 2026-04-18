@@ -1,17 +1,44 @@
 import React from 'react'
 
 const Footer = () => {
-    return (
-      <div className="max-w-[1200px] sm:h-[150px] p-12 flex justify-between mx-auto">
-        <span className="primary-color">Himashi Rathnayake</span>
-        <p className="text-gray-600">
-          <a href="mailto:himashirathnayake182@gmail.com">himashirathnayake182@gmail.com</a> <br />
-          <a href="https://www.linkedin.com/in/himashi-rathnayake-118961290/" target="_blank" rel="noopener noreferrer">LinkedIn</a><br />
-          <a href="https://github.com/Himashirathnayake1" target="_blank" rel="noopener noreferrer">GitHub</a>
-        </p>
+  return (
+    <footer className="max-w-[1200px] mx-auto px-4 pb-10 pt-4">
+      <div className="section-shell rounded-2xl p-6 md:p-8 flex flex-col md:flex-row justify-between gap-6">
+        <div>
+          <p className="display-font text-2xl font-bold primary-color">Himashi Rathnayake</p>
+          <p className="text-slate-400 mt-2 text-sm">Aspiring Associate Software Engineer</p>
+        </div>
+
+        <div className="text-slate-300 text-sm space-y-2">
+          <p>
+            <a href="mailto:himashirathnayake182@gmail.com" className="hover:text-cyan-300">
+              himashirathnayake182@gmail.com
+            </a>
+          </p>
+          <p>
+            <a
+              href="https://www.linkedin.com/in/himashi-rathnayake-118961290/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-cyan-300"
+            >
+              LinkedIn
+            </a>
+          </p>
+          <p>
+            <a
+              href="https://github.com/Himashirathnayake1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-cyan-300"
+            >
+              GitHub
+            </a>
+          </p>
+        </div>
       </div>
-    );
-  };
-  
-  export default Footer;
-  
+    </footer>
+  );
+};
+
+export default Footer;

@@ -2,23 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
+
 .primary-color{
-  @apply text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-pink-400 inline-block;
+  @apply text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-orange-300 to-rose-300 inline-block;
 }
 
 body{
-  background-color: black;
+  font-family: 'Manrope', sans-serif;
+  color: #e2e8f0;
+  background:
+    radial-gradient(circle at 15% 10%, rgba(251, 191, 36, 0.2), transparent 45%),
+    radial-gradient(circle at 90% 5%, rgba(56, 189, 248, 0.2), transparent 40%),
+    linear-gradient(145deg, #071019 0%, #0d1729 45%, #121d2f 100%);
+  min-height: 100vh;
 }
 .bg-primary-color{
-  @apply  bg-gradient-to-r from-orange-400 to-pink-400 inline-block;
+  @apply  bg-gradient-to-r from-amber-300 via-orange-400 to-rose-300 inline-block;
 }
 .type-animation-color {
-  @apply text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-green-500 inline-block;
+  @apply text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-teal-300 to-emerald-300 inline-block;
 }
-/* Smooth transitions globally */
+/* Keep transitions smooth without over-animating layout properties. */
 * {
-  transition: all 0.3s ease-in-out;
+  transition: color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease,
+    box-shadow 0.25s ease, transform 0.25s ease;
   scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 
 /* Add soft scrollbar */
@@ -26,16 +36,16 @@ body{
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #1a1a1a;
+  background: #09111f;
 }
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #fb923c, #ec4899);
+  background: linear-gradient(to bottom, #f59e0b, #38bdf8);
   border-radius: 6px;
 }
 
 /* Hover effect enhancement */
 .hover-glow:hover {
-  box-shadow: 0 0 15px rgba(252, 165, 165, 0.4), 0 0 30px rgba(251, 146, 60, 0.5);
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.28), 0 0 30px rgba(245, 158, 11, 0.32);
 }
 
 /* Button interaction effect */
@@ -44,4 +54,33 @@ body{
 }
 html {
   scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+.display-font {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.section-shell {
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  background: linear-gradient(165deg, rgba(15, 23, 42, 0.78), rgba(15, 23, 42, 0.45));
+  box-shadow: 0 20px 80px rgba(2, 6, 23, 0.45);
+  backdrop-filter: blur(6px);
+}
+
+@keyframes fade-rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page-intro {
+  animation: fade-rise 0.9s ease both;
 }

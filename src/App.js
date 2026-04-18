@@ -20,7 +20,10 @@ function App() {
   };
 
   return (
-    <div className="relative">
+    <div className="relative overflow-x-hidden">
+      <div className="pointer-events-none fixed -top-20 -left-24 h-72 w-72 rounded-full bg-amber-400/10 blur-3xl" />
+      <div className="pointer-events-none fixed top-1/3 -right-28 h-80 w-80 rounded-full bg-cyan-400/10 blur-3xl" />
+
       <Navbar />
       <Hero />
       <Skills />
@@ -29,10 +32,9 @@ function App() {
       <Contact />
       <Footer />
 
-      {/* Back to Top Button */}
       <button
         onClick={scrollToTop}
-        className="fixed bottom-6 right-6 bg-pink-600 hover:bg-pink-700 text-white p-3 rounded-full shadow-md z-50 transition duration-300"
+        className="fixed bottom-6 right-6 bg-gradient-to-r from-amber-400 to-cyan-400 text-slate-900 p-3 rounded-full shadow-md z-50 hover:scale-105"
         aria-label="Scroll to top"
       >
         ↑

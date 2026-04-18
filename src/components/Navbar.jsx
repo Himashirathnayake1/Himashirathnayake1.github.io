@@ -2,36 +2,80 @@ import React, { useState } from 'react';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 
 const Navbar = () => {
-    const [nav, setNav] = useState(false);
+  const [nav, setNav] = useState(false);
+  const navItems = [
+    { label: 'Home', href: '#hero' },
+    { label: 'Skills', href: '#skills' },
+    { label: 'About', href: '#about' },
+    { label: 'Projects', href: '#project' },
+    { label: 'Contact', href: '#contact' },
+  ];
 
-    const handleNav = () => {
-        setNav(!nav);
-    };
+  const handleNav = () => {
+    setNav(!nav);
+  };
 
-    return (
-        
-        <div className="sticky top-0 z-50 backdrop-blur-lg border border-gray-600 bg-black/80 text-gray-100 h-[100px] max-w-[1200px] mx-auto flex justify-between items-center">
+  return (
+    <header className="sticky top-3 z-50 max-w-[1200px] mx-auto px-4 page-intro">
+      <div className="section-shell rounded-2xl text-slate-100 h-[78px] px-5 flex justify-between items-center">
+        <a href="#hero" className="display-font text-2xl md:text-3xl font-bold tracking-tight">
+          <span className="primary-color">Himashi</span>
+        </a>
 
-            <h1 className='text-3xl font-bold primary-color ml-4'>Him</h1>
-            <ul className='hidden md:flex'>
-                <li className='p-5'><a href="#about">About</a></li>
-                <li className='p-5'><a href="#project">Project</a></li>
-                <li className='p-5'><a href="#contact">Contact</a></li>
-            </ul>
-            <div onClick={handleNav} className='block md:hidden'>
-                {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
-            </div>
+        <nav className="hidden md:flex items-center gap-2">
+          {navItems.map((item) => (
+            <a
+              key={item.href}
+              href={item.href}
+              className="px-4 py-2 rounded-lg text-sm font-semibold text-slate-300 hover:text-white hover:bg-slate-800/80"
+            >
+              {item.label}
+            </a>
+          ))}
+          <a
+            href="#contact"
+            className="ml-2 px-4 py-2 rounded-lg bg-gradient-to-r from-amber-400 to-cyan-400 text-slate-900 text-sm font-bold hover:brightness-105"
+          >
+            Hire Me
+          </a>
+        </nav>
 
-            <div className={nav ? 'fixed h-full left-0 top-0 w-[60%] bg-[#202121] ease-in-out duration-500' : 'fixed left-[-100%]'}>
-                <h1 className='text-3xl primary-color m-4'>Him</h1>
-                <ul className='p-8 text-2xl'>
-                    <li className='p-2'><a href='#about'>About</a></li>
-                    <li className='p-2'><a href='#project'>Project</a></li>
-                    <li className='p-2'><a href='#contact'>Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    );
+        <button
+          onClick={handleNav}
+          className="block md:hidden rounded-lg border border-slate-600 p-2"
+          aria-label="Toggle navigation"
+        >
+          {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
+        </button>
+      </div>
+
+      <div
+        className={
+          nav
+            ? 'md:hidden mt-3 section-shell rounded-2xl p-4 flex flex-col gap-2'
+            : 'hidden'
+        }
+      >
+        {navItems.map((item) => (
+          <a
+            key={item.href}
+            href={item.href}
+            className="px-3 py-2 rounded-md text-slate-200 hover:bg-slate-800/80"
+            onClick={() => setNav(false)}
+          >
+            {item.label}
+          </a>
+        ))}
+        <a
+          href="#contact"
+          className="mt-2 px-3 py-2 rounded-md bg-gradient-to-r from-amber-400 to-cyan-400 text-slate-900 font-bold text-center"
+          onClick={() => setNav(false)}
+        >
+          Hire Me
+        </a>
+      </div>
+    </header>
+  );
 };
 
 export default Navbar;

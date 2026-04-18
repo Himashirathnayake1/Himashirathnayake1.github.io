@@ -3,63 +3,84 @@ import TapON from '../assets/laong.jpg';
 import CashApp from '../assets/cash.png';
 
 const Project = () => {
+  const projects = [
+    {
+      title: 'TapOn',
+      image: TapON,
+      description:
+        'A product-oriented application focused on practical workflows and a smooth user journey.',
+      stack: ['Flutter', 'Node.js', 'Mongo DB', 'UI Design'],
+      live: '/',
+      github: 'https://github.com/Himashirathnayake1/TapOn-original',
+    },
+    {
+      title: 'Pegas Cash Management',
+      image: CashApp,
+      description:
+        'A cash management system built to streamline tracking and improve day-to-day financial visibility.',
+      stack: ['Flutter', 'Firebase'],
+      live: '/',
+      github: 'https://github.com/Himashirathnayake1/CashCollector-',
+    },
+      
+  ];
+
   return (
-    <div className="max-w-[1200px] mx-auto p-5" id="project">
-      <div className="pb-8 text-center" data-aos="fade-up">
-        <p className="text-4xl mb-3 font-bold primary-color">Projects</p>
-        <p className="text-gray-400">Check out some of my recent projects</p>
+    <section className="max-w-[1200px] mx-auto px-4 my-10" id="project">
+      <div className="pb-8" data-aos="fade-up">
+
+        <h2 className="display-font text-3xl md:text-4xl mt-2 font-bold primary-color">Featured Projects</h2>
+       
       </div>
 
-      <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
-        {/* Project 1 */}
-        <div
-          className="transform transition duration-500 hover:scale-105 group relative overflow-hidden shadow-lg rounded-xl"
-          data-aos="zoom-in"
-        >
-          <img src={TapON} alt="TapOn" className="w-full h-60 object-cover" />
-          <div className="opacity-0 group-hover:opacity-90 bg-black/70 absolute inset-0 flex flex-col justify-center items-center transition duration-300">
-            <span className="text-2xl font-bold text-white tracking-wider">TapOn</span>
-            <div className="pt-6 text-center">
-              <a href="/" target="_blank" rel="noopener noreferrer">
-                <button className="rounded px-4 py-2 m-2 bg-white text-gray-800 font-semibold hover:bg-gray-200">
-                  Live
-                </button>
-              </a>
-              <a href="https://github.com/Himashirathnayake1/TapOn-original" target="_blank" rel="noopener noreferrer">
-                <button className="rounded px-4 py-2 m-2 bg-gradient-to-r from-orange-400 to-pink-500 text-white font-semibold hover:opacity-90">
-                  GitHub
-                </button>
-              </a>
-            </div>
-          </div>
-        </div>
+      <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6">
+        {projects.map((project, index) => (
+          <article
+            key={project.title}
+            className="section-shell rounded-2xl overflow-hidden hover:-translate-y-1"
+            data-aos="zoom-in"
+            data-aos-delay={index * 90}
+          >
+            <img src={project.image} alt={project.title} className="w-full h-56 object-cover" />
 
-        {/* Project 2 */}
-        <div
-          className="transform transition duration-500 hover:scale-105 group relative overflow-hidden shadow-lg rounded-xl"
-          data-aos="zoom-in"
-        >
-          <img src={CashApp} alt="Pegas Cash Management" className="w-full h-60 object-cover" />
-          <div className="opacity-0 group-hover:opacity-90 bg-black/70 absolute inset-0 flex flex-col justify-center items-center transition duration-300">
-            <span className="text-2xl font-bold text-white tracking-wider">Pegas Cash Management</span>
-            <div className="pt-6 text-center">
-              <a href="/" target="_blank" rel="noopener noreferrer">
-                <button className="rounded px-4 py-2 m-2 bg-white text-gray-800 font-semibold hover:bg-gray-200">
-                  Live
-                </button>
-              </a>
-              <a href="https://github.com/Himashirathnayake1/CashCollector-" target="_blank" rel="noopener noreferrer">
-                <button className="rounded px-4 py-2 m-2 bg-gradient-to-r from-orange-400 to-pink-500 text-white font-semibold hover:opacity-90">
-                  GitHub
-                </button>
-              </a>
-            </div>
-          </div>
-        </div>
+            <div className="p-6">
+              <h3 className="display-font text-2xl font-bold text-slate-100">{project.title}</h3>
+              <p className="text-slate-300 mt-3 leading-relaxed">{project.description}</p>
 
-        {/* Add more projects as needed */}
+              <div className="flex flex-wrap gap-2 mt-4">
+                {project.stack.map((item) => (
+                  <span
+                    key={item}
+                    className="text-xs rounded-full border border-slate-600 bg-slate-900/70 px-3 py-1 text-slate-200"
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
+
+              <div className="pt-6 flex flex-wrap gap-3">
+                <a
+                  href={project.live}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-lg px-4 py-2 bg-slate-100 text-slate-900 font-semibold hover:bg-white"
+                >
+                  Live
+                </a>
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-lg px-4 py-2 bg-gradient-to-r from-amber-400 to-cyan-400 text-slate-900 font-bold"
+                >
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </article>
+        ))}
       </div>
-    </div>
+    </section>
   );
 };
 

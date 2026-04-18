@@ -3,56 +3,79 @@ import heroimage from '../assets/about.jpg';
 import { TypeAnimation } from 'react-type-animation';
 
 const Hero = () => {
+  const highlights = [
+    { label: 'Focus', value: 'Associate Software Engineer' },
+    { label: 'Core', value: 'Flutter and Firebase' },
+    { label: 'Strength', value: 'Practical Product Thinking' },
+  ];
+
   return (
     <div
-      className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-[1200px] min-h-[70vh] mx-auto py-16 px-4 items-center"
+      className="max-w-[1200px] mx-auto px-4 pt-10 pb-8"
       id="hero"
     >
-      {/* Profile Image with AOS */}
-      <div
-        className="col-span-1 mx-auto w-[300px] h-auto lg:w-[400px]"
-        data-aos="fade-right"
-      >
-        <img
-          className="mx-auto rounded-xl py-8 md:py-0"
-          src={heroimage}
-          alt="Hero"
-          width={300}
-          height={300}
-        />
-      </div>
+      <div className="section-shell rounded-3xl p-6 md:p-10 grid grid-cols-1 lg:grid-cols-5 gap-8 items-center page-intro">
+        <div className="lg:col-span-3" data-aos="fade-right">
+         
 
-      {/* Text Section with AOS */}
-      <div className="col-span-2 px-5 my-auto" data-aos="fade-left">
-        <h1 className="text-orange text-4xl sm:text-5xl lg:text-8xl font-extrabold leading-tight">
-          <span className="primary-color">I’m a</span>
-          <br />
-          <TypeAnimation
-            sequence={['Mobile Dev', 1000, 'Designer', 1000, 'Software Engineer', 1000]}
-            wrapper="span"
-            speed={50}
-            repeat={Infinity}
-            className="type-animation-color"
+          <h1 className="display-font text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-slate-100">
+            Hi, I am <span className="primary-color">Himashi Rathnayake</span>
+          </h1>
+
+          <div className="display-font mt-4 text-2xl sm:text-3xl font-bold text-slate-100 min-h-[48px]">
+            <TypeAnimation
+              sequence={[
+                'Mobile App Developer',
+                1200,
+                'Frontend Engineer',
+                1200,
+                'Creative Problem Solver',
+                1200,
+              ]}
+              wrapper="span"
+              speed={45}
+              repeat={Infinity}
+              className="type-animation-color"
+            />
+          </div>
+
+          <p className="text-slate-300 text-base sm:text-lg my-6 max-w-2xl leading-relaxed">
+           Software Developer focused on building cross-platform and AI-powered apps. I create clean, high-performance applications using Flutter, Firebase, and modern APIs.
+          </p>
+
+          <div className="my-8 flex flex-wrap gap-4">
+            <a
+              href="#project"
+              className="px-6 py-3 rounded-xl bg-gradient-to-r from-amber-400 to-cyan-400 text-slate-900 font-bold shadow-md hover:scale-105"
+            >
+              View Projects
+            </a>
+            <a
+              href="#contact"
+              className="px-6 py-3 rounded-xl border border-slate-500 text-slate-100 hover:bg-slate-800/80"
+            >
+              Contact Me
+            </a>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            {highlights.map((item) => (
+              <div key={item.label} className="rounded-xl border border-slate-700 bg-slate-900/60 p-3">
+                <p className="text-xs uppercase tracking-wider text-slate-400">{item.label}</p>
+                <p className="text-sm font-semibold text-slate-100 mt-1">{item.value}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="lg:col-span-2 mx-auto w-full max-w-[360px]" data-aos="fade-left">
+          <img
+            className="mx-auto rounded-2xl border border-slate-700 shadow-xl"
+            src={heroimage}
+            alt="Himashi Rathnayake"
+            width={360}
+            height={420}
           />
-        </h1>
-
-        <p className="text-white sm:text-lg my-6 lg:text-xl max-w-xl">
-          My name is Himashi Rathnayake and I am seeking an internship in Associate Software Engineering.
-        </p>
-
-        <div className="my-8 flex flex-wrap gap-4">
-          <a
-            href="/"
-            className="px-6 py-3 rounded-xl bg-gradient-to-br from-orange-500 to-pink-500 text-white font-semibold shadow-md hover:scale-105 hover:shadow-orange-400 transition-transform duration-300"
-          >
-            Download CV
-          </a>
-          <a
-            href="#contact"
-            className="px-6 py-3 rounded-xl border border-gray-400 text-white hover:bg-gradient-to-br from-orange-500 to-pink-500 hover:border-transparent transition duration-300"
-          >
-            Contact
-          </a>
         </div>
       </div>
     </div>
