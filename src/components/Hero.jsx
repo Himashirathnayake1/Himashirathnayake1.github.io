@@ -27,7 +27,7 @@ const Hero = () => {
               sequence={[
                 'Mobile App Developer',
                 1200,
-                'Frontend Engineer',
+                'Software Engineer',
                 1200,
                 'Creative Problem Solver',
                 1200,
@@ -40,7 +40,7 @@ const Hero = () => {
           </div>
 
           <p className="text-slate-300 text-base sm:text-lg my-6 max-w-2xl leading-relaxed">
-           Software Developer focused on building cross-platform and AI-powered apps. I create clean, high-performance applications using Flutter, Firebase, and modern APIs.
+          Software Developer focused on building solutions that solve real-world problems. I design and develop clean apps using Flutter, Firebase, and modern APIs and Technologies, with a strong focus on improving user experience, efficiency, and scalability.
           </p>
 
           <div className="my-8 flex flex-wrap gap-4">

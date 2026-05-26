@@ -1,29 +1,8 @@
 import React from 'react';
-import TapON from '../assets/laong.jpg';
-import CashApp from '../assets/cash.png';
+import { Link } from 'react-router-dom';
+import projects from '../data/projects';
 
 const Project = () => {
-  const projects = [
-    {
-      title: 'TapOn',
-      image: TapON,
-      description:
-        'A product-oriented application focused on practical workflows and a smooth user journey.',
-      stack: ['Flutter', 'Node.js', 'Mongo DB', 'UI Design'],
-      live: '/',
-      github: 'https://github.com/Himashirathnayake1/TapOn-original',
-    },
-    {
-      title: 'Pegas Cash Management',
-      image: CashApp,
-      description:
-        'A cash management system built to streamline tracking and improve day-to-day financial visibility.',
-      stack: ['Flutter', 'Firebase'],
-      live: '/',
-      github: 'https://github.com/Himashirathnayake1/CashCollector-',
-    },
-      
-  ];
 
   return (
     <section className="max-w-[1200px] mx-auto px-4 my-10" id="project">
@@ -59,14 +38,12 @@ const Project = () => {
               </div>
 
               <div className="pt-6 flex flex-wrap gap-3">
-                <a
-                  href={project.live}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  to={`/project/${project.slug}`}
                   className="rounded-lg px-4 py-2 bg-slate-100 text-slate-900 font-semibold hover:bg-white"
                 >
                   Live
-                </a>
+                </Link>
                 <a
                   href={project.github}
                   target="_blank"
