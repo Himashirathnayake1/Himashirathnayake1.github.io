@@ -61,8 +61,8 @@ const projects = [
     },
   },
   {
-    title: 'Pegas Cash Management',
-    slug: 'pegas-cash',
+    title: 'Cash Collector',
+    slug: 'cash',
     image: CashApp,
     description:
       'A cash management system built to streamline tracking and improve day-to-day financial visibility.',
