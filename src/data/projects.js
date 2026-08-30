@@ -4,6 +4,56 @@ import ExpenseFlowImg from '../assets/ExpenseFlow.png';
 import AgriShareImg from '../assets/agriShare.png';
 
 const projects = [
+   {
+    title: 'AgriShare',
+    slug: 'agrishare',
+    image: AgriShareImg,
+    description:
+      'A full-stack agriculture platform connecting farmers with knowledge sharing, multilingual community support, and admin moderation.',
+    stack: ['React', 'Node.js', 'Express', 'MongoDB', 'JWT'],
+    github: 'https://github.com/Himashirathnayake1/AgriShare',
+    live: 'https://agriishare.netlify.app/',
+    demoFile: '',
+    details: {
+      about:
+        'AgriShare is a MERN stack platform created to connect farmers across Sri Lanka and support agricultural learning through community-driven knowledge sharing. It includes multilingual content, secure authentication, and role-based access for farmers and administrators.',
+      features: [
+        'Farmer knowledge sharing posts',
+        'Multilingual UI in English, Sinhala, and Tamil',
+        'JWT-based authentication and authorization',
+        'Role-based farmer and admin access',
+        'Commenting, liking, and saving posts',
+        'Admin moderation workflow',
+        'Responsive agricultural design system',
+        'MongoDB-powered data management',
+      ],
+      technologies: [
+        { name: 'Frontend', value: 'React 19 + Vite' },
+        { name: 'Backend', value: 'Node.js + Express.js 5' },
+        { name: 'Database', value: 'MongoDB + Mongoose' },
+        { name: 'Security', value: 'JWT + bcryptjs + Cookies' },
+        { name: 'Internationalization', value: 'i18next' },
+      ],
+      userRoles: {
+        'Farmers': [
+          'Share crop and farming guidance',
+          'Comment, like, and save posts',
+          'Access community knowledge',
+        ],
+        'Admins': [
+          'Review submitted posts',
+          'Approve, reject, or request changes',
+          'Moderate platform content',
+        ],
+      },
+      objectives: [
+        'Bridge knowledge gaps among farmers',
+        'Support multilingual agricultural communication',
+        'Create a secure community platform for agriculture',
+        'Improve access to useful farming guidance and support',
+      ],
+    },
+  },
   {
     title: 'TapOn',
     slug: 'tapon',
@@ -164,56 +214,7 @@ const projects = [
       ],
     },
   },
-  {
-    title: 'AgriShare',
-    slug: 'agrishare',
-    image: AgriShareImg,
-    description:
-      'A full-stack agriculture platform connecting farmers with knowledge sharing, multilingual community support, and admin moderation.',
-    stack: ['React', 'Node.js', 'Express', 'MongoDB', 'JWT'],
-    github: 'https://github.com/Himashirathnayake1/AgriShare',
-    live: 'https://agriishare.netlify.app/',
-    demoFile: '',
-    details: {
-      about:
-        'AgriShare is a MERN stack platform created to connect farmers across Sri Lanka and support agricultural learning through community-driven knowledge sharing. It includes multilingual content, secure authentication, and role-based access for farmers and administrators.',
-      features: [
-        'Farmer knowledge sharing posts',
-        'Multilingual UI in English, Sinhala, and Tamil',
-        'JWT-based authentication and authorization',
-        'Role-based farmer and admin access',
-        'Commenting, liking, and saving posts',
-        'Admin moderation workflow',
-        'Responsive agricultural design system',
-        'MongoDB-powered data management',
-      ],
-      technologies: [
-        { name: 'Frontend', value: 'React 19 + Vite' },
-        { name: 'Backend', value: 'Node.js + Express.js 5' },
-        { name: 'Database', value: 'MongoDB + Mongoose' },
-        { name: 'Security', value: 'JWT + bcryptjs + Cookies' },
-        { name: 'Internationalization', value: 'i18next' },
-      ],
-      userRoles: {
-        'Farmers': [
-          'Share crop and farming guidance',
-          'Comment, like, and save posts',
-          'Access community knowledge',
-        ],
-        'Admins': [
-          'Review submitted posts',
-          'Approve, reject, or request changes',
-          'Moderate platform content',
-        ],
-      },
-      objectives: [
-        'Bridge knowledge gaps among farmers',
-        'Support multilingual agricultural communication',
-        'Create a secure community platform for agriculture',
-        'Improve access to useful farming guidance and support',
-      ],
-    },
-  },
+ 
 ];
 
 export default projects;
