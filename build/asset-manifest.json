@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.207d0e0f.css",
-    "main.js": "/static/js/main.96ccbd78.js",
+    "main.css": "/static/css/main.7254e940.css",
+    "main.js": "/static/js/main.0ce2c1c6.js",
     "static/media/tapon.png": "/static/media/tapon.7c3f591f0fbe73d5395e.png",
     "static/media/cash.png": "/static/media/cash.581e278dd86c8b5d5635.png",
     "static/media/about.jpg": "/static/media/about.77e3e58e69e539e95c87.jpg",
@@ -12,12 +12,14 @@
     "static/media/agora.png": "/static/media/agora.4fb7f8fb086d5b76adba.png",
     "static/media/deepgram.png": "/static/media/deepgram.c38eb5b01c26151cb7b3.png",
     "static/media/javascript.png": "/static/media/javascript.1ccd6ef9bb1f9c84ef00.png",
+    "static/media/expenseflow.svg": "/static/media/expenseflow.2a64e92647aa9f58a26ae08f1ed6d085.svg",
+    "static/media/agrishare.svg": "/static/media/agrishare.8bd1fd13528117a5293bc318516b9c8a.svg",
     "index.html": "/index.html",
-    "main.207d0e0f.css.map": "/static/css/main.207d0e0f.css.map",
-    "main.96ccbd78.js.map": "/static/js/main.96ccbd78.js.map"
+    "main.7254e940.css.map": "/static/css/main.7254e940.css.map",
+    "main.0ce2c1c6.js.map": "/static/js/main.0ce2c1c6.js.map"
   },
   "entrypoints": [
-    "static/css/main.207d0e0f.css",
-    "static/js/main.96ccbd78.js"
+    "static/css/main.7254e940.css",
+    "static/js/main.0ce2c1c6.js"
   ]
 }

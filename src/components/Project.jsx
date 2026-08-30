@@ -38,12 +38,23 @@ const Project = () => {
               </div>
 
               <div className="pt-6 flex flex-wrap gap-3">
-                <Link
-                  to={`/project/${project.slug}`}
-                  className="rounded-lg px-4 py-2 bg-slate-100 text-slate-900 font-semibold hover:bg-white"
-                >
-                  Live
-                </Link>
+                {project.live ? (
+                  <a
+                    href={project.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="rounded-lg px-4 py-2 bg-slate-100 text-slate-900 font-semibold hover:bg-white"
+                  >
+                    Live
+                  </a>
+                ) : (
+                  <Link
+                    to={`/project/${project.slug}`}
+                    className="rounded-lg px-4 py-2 bg-slate-100 text-slate-900 font-semibold hover:bg-white"
+                  >
+                    Live
+                  </Link>
+                )}
                 <a
                   href={project.github}
                   target="_blank"

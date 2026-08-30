@@ -1,5 +1,7 @@
 import TapON from '../assets/tapon.png';
 import CashApp from '../assets/cash.png';
+import ExpenseFlowImg from '../assets/ExpenseFlow.png';
+import AgriShareImg from '../assets/agriShare.png';
 
 const projects = [
   {
@@ -109,6 +111,106 @@ const projects = [
         'Reduce paperwork and calculation errors',
         'Provide real-time financial tracking',
         'Enhance efficiency for collection officers',
+      ],
+    },
+  },
+  {
+    title: 'ExpenseFlow',
+    slug: 'expenseflow',
+    image: ExpenseFlowImg,
+    description:
+      'A personal finance dashboard for tracking income, expenses, balances, and spending trends in one place.',
+    stack: ['HTML5', 'CSS3', 'JavaScript', 'LocalStorage'],
+    github: 'https://github.com/Himashirathnayake1/ExpenseFlow',
+    demoFile: 'ExpenseFlow.mp4',
+    details: {
+      about:
+        'ExpenseFlow is a modern personal expense tracker designed to help users manage daily financial activity with clarity. It lets people record income and expense transactions, calculate totals, and monitor spending patterns in an intuitive dashboard.',
+      features: [
+        'Add income and expense transactions',
+        'Track total balance, income, and expenses',
+        'Search transactions by keyword',
+        'Filter by type and category',
+        'Edit or delete entries',
+        'View spending by category',
+        'Calculate average and largest expense',
+        'Store data using LocalStorage',
+        'Responsive dashboard for desktop and mobile',
+      ],
+      technologies: [
+        { name: 'Frontend', value: 'HTML5 + CSS3' },
+        { name: 'Logic', value: 'JavaScript (ES6)' },
+        { name: 'Storage', value: 'Browser LocalStorage' },
+        { name: 'Data Format', value: 'JSON' },
+      ],
+      userRoles: {
+        'Personal Users': [
+          'Log income and expenses',
+          'Monitor account balance',
+          'Analyze spending trends',
+          'Keep finances organized',
+        ],
+        'Budget Planners': [
+          'Review category-based cost breakdowns',
+          'Track recurring spending',
+          'Plan smarter monthly budgets',
+        ],
+      },
+      objectives: [
+        'Simplify personal budgeting tasks',
+        'Improve visibility into spending behavior',
+        'Create a lightweight browser-based finance tracker',
+        'Offer a clean and responsive user experience',
+      ],
+    },
+  },
+  {
+    title: 'AgriShare',
+    slug: 'agrishare',
+    image: AgriShareImg,
+    description:
+      'A full-stack agriculture platform connecting farmers with knowledge sharing, multilingual community support, and admin moderation.',
+    stack: ['React', 'Node.js', 'Express', 'MongoDB', 'JWT'],
+    github: 'https://github.com/Himashirathnayake1/AgriShare',
+    live: 'https://agriishare.netlify.app/',
+    demoFile: '',
+    details: {
+      about:
+        'AgriShare is a MERN stack platform created to connect farmers across Sri Lanka and support agricultural learning through community-driven knowledge sharing. It includes multilingual content, secure authentication, and role-based access for farmers and administrators.',
+      features: [
+        'Farmer knowledge sharing posts',
+        'Multilingual UI in English, Sinhala, and Tamil',
+        'JWT-based authentication and authorization',
+        'Role-based farmer and admin access',
+        'Commenting, liking, and saving posts',
+        'Admin moderation workflow',
+        'Responsive agricultural design system',
+        'MongoDB-powered data management',
+      ],
+      technologies: [
+        { name: 'Frontend', value: 'React 19 + Vite' },
+        { name: 'Backend', value: 'Node.js + Express.js 5' },
+        { name: 'Database', value: 'MongoDB + Mongoose' },
+        { name: 'Security', value: 'JWT + bcryptjs + Cookies' },
+        { name: 'Internationalization', value: 'i18next' },
+      ],
+      userRoles: {
+        'Farmers': [
+          'Share crop and farming guidance',
+          'Comment, like, and save posts',
+          'Access community knowledge',
+        ],
+        'Admins': [
+          'Review submitted posts',
+          'Approve, reject, or request changes',
+          'Moderate platform content',
+        ],
+      },
+      objectives: [
+        'Bridge knowledge gaps among farmers',
+        'Support multilingual agricultural communication',
+        'Create a secure community platform for agriculture',
+        'Improve access to useful farming guidance and support',
       ],
     },
   },

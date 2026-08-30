@@ -29,15 +29,18 @@ const ProjectDemo = () => {
         <section className="bg-slate-800 rounded-lg p-4">
           <p className="text-slate-300 mb-4">{project.description}</p>
 
-         <div className="w-full aspect-video rounded overflow-hidden bg-black">
-  <video
-    controls
-    className="w-full h-full object-contain"
-  >
-    <source src={`/demo/${project.demoFile}`} type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
-</div>
+          {project.demoFile ? (
+            <div className="w-full aspect-video rounded overflow-hidden bg-black mb-4">
+              <video controls className="w-full h-full object-contain">
+                <source src={`/demo/${project.demoFile}`} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          ) : (
+            <div className="w-full rounded-lg border border-dashed border-slate-600 bg-slate-900/70 p-6 mb-4 text-center text-slate-300">
+              Demo video coming soon.
+            </div>
+          )}
           {/* Timeline / Workflow style single-column details */}
           {project.details && (
             <div className="mt-8 relative">
