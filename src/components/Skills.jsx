@@ -10,6 +10,8 @@ import agora from '../assets/agora.png'
 import deepgram from '../assets/deepgram.png'
 import ai from '../assets/ai.png'
 import php from '../assets/php.png'
+import mongodb from '../assets/mongoDB.png'
+import nodejs from '../assets/nodejs.png'
 import sql from '../assets/sql.png'
 import { useTheme } from '../context/ThemeContext'
 
@@ -21,6 +23,8 @@ const Skills = () => {
         { name: 'JavaScript', icon: javascript },
         { name: 'PHP', icon: php },
         { name: 'SQL', icon: sql },
+        { name: 'Node.js', icon: nodejs },
+        ( { name: 'MongoDB', icon: mongodb }),
         { name: 'Firebase', icon: firebase },
         { name: 'HTML', icon: html },
         { name: 'CSS', icon: css },
