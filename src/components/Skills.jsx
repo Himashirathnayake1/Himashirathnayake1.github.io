@@ -9,6 +9,8 @@ import postman from '../assets/postman.png'
 import agora from '../assets/agora.png'
 import deepgram from '../assets/deepgram.png'
 import ai from '../assets/ai.png'
+import php from '../assets/php.png'
+import sql from '../assets/sql.png'
 import { useTheme } from '../context/ThemeContext'
 
 const Skills = () => {
@@ -17,14 +19,15 @@ const Skills = () => {
         { name: 'Flutter', icon: flutter },
         { name: 'React', icon: react },
         { name: 'JavaScript', icon: javascript },
+        { name: 'PHP', icon: php },
+        { name: 'SQL', icon: sql },
         { name: 'Firebase', icon: firebase },
         { name: 'HTML', icon: html },
         { name: 'CSS', icon: css },
-         { name: 'Postman', icon: postman },
+        { name: 'Postman', icon: postman },
         { name: 'Agora', icon: agora },
-            { name: 'Deepgram', icon: deepgram },
-            { name: 'Gemini', icon: ai },
-
+        { name: 'Deepgram', icon: deepgram },
+        { name: 'Gemini', icon: ai },
     ];
 
     return (
@@ -66,10 +69,10 @@ const Skills = () => {
                     {skills.map((skill, index) => (
                         <div
                             key={skill.name}
-                            className={`float-animate rounded-xl border p-4 text-center hover:-translate-y-1 transition-all duration-300 ${
+                            className={`float-animate group rounded-xl border p-4 text-center transition-all duration-300 hover:-translate-y-2 hover:border-cyan-400/60 hover:shadow-[0_12px_35px_rgba(34,211,238,0.12)] ${
                                 isDark
-                                    ? 'border-slate-700 bg-slate-900/50 hover:border-cyan-300/50'
-                                    : 'border-slate-300 bg-white hover:border-cyan-400/50 shadow-sm'
+                                    ? 'border-slate-700 bg-slate-900/50'
+                                    : 'border-slate-300 bg-white shadow-sm'
                             }`}
                             style={{ animationDelay: `${index * 0.15}s` }}
                         >
@@ -78,10 +81,10 @@ const Skills = () => {
                                 alt={skill.name}
                                 width={64}
                                 height={64}
-                                className="mx-auto h-14 w-14 object-contain"
+                                className="mx-auto h-14 w-14 object-contain transition-transform duration-300 group-hover:scale-110"
                             />
                             <p className={`mt-3 text-sm font-semibold transition-colors duration-300 ${
-                                isDark ? 'text-slate-100' : 'text-slate-900'
+                                isDark ? 'text-slate-100 group-hover:text-cyan-300' : 'text-slate-900 group-hover:text-cyan-600'
                             }`}>{skill.name}</p>
                         </div>
                     ))}
@@ -98,10 +101,10 @@ const Skills = () => {
                             {skills.map((skill, index) => (
                                 <div
                                     key={skill.name}
-                                    className={`float-animate flex-shrink-0 rounded-xl border p-4 text-center hover:-translate-y-1 transition-all duration-300 w-32 ${
+                                    className={`float-animate group flex-shrink-0 rounded-xl border p-4 text-center transition-all duration-300 hover:-translate-y-2 hover:border-cyan-400/60 hover:shadow-[0_12px_35px_rgba(34,211,238,0.12)] w-32 ${
                                         isDark
-                                            ? 'border-slate-700 bg-slate-900/50 hover:border-cyan-300/50'
-                                            : 'border-slate-300 bg-white hover:border-cyan-400/50 shadow-sm'
+                                            ? 'border-slate-700 bg-slate-900/50'
+                                            : 'border-slate-300 bg-white shadow-sm'
                                     }`}
                                     style={{ animationDelay: `${index * 0.15}s` }}
                                 >
@@ -110,10 +113,10 @@ const Skills = () => {
                                         alt={skill.name}
                                         width={64}
                                         height={64}
-                                        className="mx-auto h-14 w-14 object-contain"
+                                        className="mx-auto h-14 w-14 object-contain transition-transform duration-300 group-hover:scale-110"
                                     />
                                     <p className={`mt-3 text-sm font-semibold transition-colors duration-300 ${
-                                        isDark ? 'text-slate-100' : 'text-slate-900'
+                                        isDark ? 'text-slate-100 group-hover:text-cyan-300' : 'text-slate-900 group-hover:text-cyan-600'
                                     }`}>{skill.name}</p>
                                 </div>
                             ))}

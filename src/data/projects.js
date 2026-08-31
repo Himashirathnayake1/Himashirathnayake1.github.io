@@ -55,6 +55,58 @@ const projects = [
     },
   },
   {
+    title: 'Cash Collector',
+    slug: 'cash',
+    image: CashApp,
+    description:
+      'A cash management system built to streamline tracking and improve day-to-day financial visibility.',
+    stack: ['Flutter', 'Firebase'],
+    github: 'https://github.com/Himashirathnayake1/CashCollector-',
+    demoFile: 'cash-demo.mp4',
+    details: {
+      about:
+        'Cash Collector App is a mobile application developed to simplify daily cash collection and payment tracking processes for businesses and field officers. The app helps collectors manage customer payments, record transactions, monitor dues, and maintain accurate financial records efficiently. The system improves speed, accuracy, and transparency in handling cash collection activities through a user-friendly mobile interface.',
+      features: [
+        'Secure User Login & Authentication',
+        'Customer Payment Collection',
+        'Real-Time Transaction Recording',
+        'Daily Collection Reports',
+        'Payment History Tracking',
+        'Due Amount Management',
+        'Search & Filter Shops',
+        'Responsive Mobile Interface',
+        'Firebase Database Integration',
+      ],
+      technologies: [
+        { name: 'Frontend', value: 'Flutter' },
+        { name: 'Backend', value: 'Firebase' },
+        { name: 'Database', value: 'Firebase Firestore' },
+        { name: 'Authentication', value: 'Firebase Authentication' },
+      ],
+      userRoles: {
+        'Cash Collectors': [
+          'Record customer payments',
+          'Track pending dues',
+          'View daily collections',
+          'Manage transaction history',
+        ],
+        'Admin': [
+          'Monitor all collections',
+          'Manage customer records',
+          'Generate reports',
+          'Track collector activities',
+        ],
+      },
+      objectives: [
+        'Digitize manual cash collection processes',
+        'Improve transaction accuracy',
+        'Reduce paperwork and calculation errors',
+        'Provide real-time financial tracking',
+        'Enhance efficiency for collection officers',
+      ],
+    },
+  },
+  {
     title: 'TapOn',
     slug: 'tapon',
     image: TapON,
@@ -112,58 +164,7 @@ const projects = [
       ],
     },
   },
-  {
-    title: 'Cash Collector',
-    slug: 'cash',
-    image: CashApp,
-    description:
-      'A cash management system built to streamline tracking and improve day-to-day financial visibility.',
-    stack: ['Flutter', 'Firebase'],
-    github: 'https://github.com/Himashirathnayake1/CashCollector-',
-    demoFile: 'cash-demo.mp4',
-    details: {
-      about:
-        'Cash Collector App is a mobile application developed to simplify daily cash collection and payment tracking processes for businesses and field officers. The app helps collectors manage customer payments, record transactions, monitor dues, and maintain accurate financial records efficiently. The system improves speed, accuracy, and transparency in handling cash collection activities through a user-friendly mobile interface.',
-      features: [
-        'Secure User Login & Authentication',
-        'Customer Payment Collection',
-        'Real-Time Transaction Recording',
-        'Daily Collection Reports',
-        'Payment History Tracking',
-        'Due Amount Management',
-        'Search & Filter Shops',
-        'Responsive Mobile Interface',
-        'Firebase Database Integration',
-      ],
-      technologies: [
-        { name: 'Frontend', value: 'Flutter' },
-        { name: 'Backend', value: 'Firebase' },
-        { name: 'Database', value: 'Firebase Firestore' },
-        { name: 'Authentication', value: 'Firebase Authentication' },
-      ],
-      userRoles: {
-        'Cash Collectors': [
-          'Record customer payments',
-          'Track pending dues',
-          'View daily collections',
-          'Manage transaction history',
-        ],
-        'Admin': [
-          'Monitor all collections',
-          'Manage customer records',
-          'Generate reports',
-          'Track collector activities',
-        ],
-      },
-      objectives: [
-        'Digitize manual cash collection processes',
-        'Improve transaction accuracy',
-        'Reduce paperwork and calculation errors',
-        'Provide real-time financial tracking',
-        'Enhance efficiency for collection officers',
-      ],
-    },
-  },
+  
   {
     title: 'ExpenseFlow',
     slug: 'expenseflow',
