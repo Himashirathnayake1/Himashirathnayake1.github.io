@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/static/css/main.6a724bff.css",
-    "main.js": "/static/js/main.d6e404ca.js",
+    "main.js": "/static/js/main.c010705e.js",
     "static/media/tapon.png": "/static/media/tapon.7c3f591f0fbe73d5395e.png",
+    "static/media/light_bg.png": "/static/media/light_bg.f133815712332e6b0045.png",
     "static/media/agriShare.png": "/static/media/agriShare.8ba6edeb169575686478.png",
     "static/media/php.png": "/static/media/php.858a3360052ed27ed430.png",
     "static/media/cash.png": "/static/media/cash.581e278dd86c8b5d5635.png",
     "static/media/nodejs.png": "/static/media/nodejs.c625009e1c3518744924.png",
     "static/media/dark_bg.png": "/static/media/dark_bg.da130b8eca45a4082012.png",
-    "static/media/light_bg.png": "/static/media/light_bg.90817c269229bb95172e.png",
     "static/media/mongoDB.png": "/static/media/mongoDB.85778da416046a4fff78.png",
     "static/media/about.jpg": "/static/media/about.77e3e58e69e539e95c87.jpg",
     "static/media/sql.png": "/static/media/sql.747bda54b3b9d7dc5ae8.png",
@@ -22,10 +22,10 @@
     "static/media/javascript.png": "/static/media/javascript.1ccd6ef9bb1f9c84ef00.png",
     "index.html": "/index.html",
     "main.6a724bff.css.map": "/static/css/main.6a724bff.css.map",
-    "main.d6e404ca.js.map": "/static/js/main.d6e404ca.js.map"
+    "main.c010705e.js.map": "/static/js/main.c010705e.js.map"
   },
   "entrypoints": [
     "static/css/main.6a724bff.css",
-    "static/js/main.d6e404ca.js"
+    "static/js/main.c010705e.js"
   ]
 }
