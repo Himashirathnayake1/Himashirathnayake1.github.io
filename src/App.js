@@ -14,6 +14,8 @@ import Project from './components/Project';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ProjectDemo from './pages/ProjectDemo';
+import darkBg from './assets/dark_bg.png';
+import lightBg from './assets/light_bg.png';
 
 function AppContent() {
   useEffect(() => {
@@ -27,9 +29,15 @@ function AppContent() {
   };
 
   const MainPage = () => (
-    <div className={`relative overflow-x-hidden transition-colors duration-300 ${
-      isDark ? 'bg-slate-950' : 'bg-white'
-    }`}>
+    <div 
+      className="relative overflow-x-hidden transition-colors duration-300"
+      style={{
+        backgroundImage: `url(${isDark ? darkBg : lightBg})`,
+        backgroundSize: 'cover',
+        backgroundAttachment: 'fixed',
+        backgroundPosition: 'center'
+      }}
+    >
       <div className="pointer-events-none fixed -top-20 -left-24 h-72 w-72 rounded-full bg-amber-400/10 blur-3xl" />
       <div className="pointer-events-none fixed top-1/3 -right-28 h-80 w-80 rounded-full bg-cyan-400/10 blur-3xl" />
 
