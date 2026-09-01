@@ -91,7 +91,7 @@ I am a Software Developer passionate about building cross-platform mobile, web, 
                       </h4>
                       <p
                         className={`text-sm leading-relaxed transition-colors duration-300 ${
-                          isDark ? 'text-slate-400' : 'text-slate-600'
+                          isDark ? 'text-slate-400' : 'text-slate-300'
                         }`}
                       >
                         {item.description}

@@ -63,14 +63,14 @@ const Hero = () => {
               Mobile • Web • AI Solutions
             </p>
             <p className={`text-sm mt-3 transition-colors duration-300 ${
-              isDark ? 'text-slate-400' : 'text-slate-600'
+              isDark ? 'text-slate-400' : 'text-slate-300'
             }`}>
               Always Learning, Always Improving
             </p>
           </div>
 
           <p className={`text-base sm:text-lg my-6 max-w-2xl leading-relaxed transition-colors duration-300 ${
-            isDark ? 'text-slate-300' : 'text-slate-700'
+            isDark ? 'text-slate-300' : 'text-slate-200'
           }`}>
 Passionate about creating innovative mobile and web applications that solve real-world problems.
           </p>
