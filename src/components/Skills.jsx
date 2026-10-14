@@ -14,6 +14,7 @@ import mongodb from '../assets/mongoDB.png'
 import nodejs from '../assets/nodejs.png'
 import sql from '../assets/sql.png'
 import { useTheme } from '../context/ThemeContext'
+import Marquee from 'react-fast-marquee'
 
 const Skills = () => {
     const { isDark } = useTheme()
@@ -68,64 +69,31 @@ const Skills = () => {
                   
                 </div>
 
-                {/* Mobile/Tablet: Grid Layout */}
-                <div className="grid grid-cols-2 sm:grid-cols-3 lg:hidden gap-4 mt-8">
-                    {skills.map((skill, index) => (
-                        <div
-                            key={skill.name}
-                            className={`float-animate group rounded-xl border p-4 text-center transition-all duration-300 hover:-translate-y-2 hover:border-cyan-400/60 hover:shadow-[0_12px_35px_rgba(34,211,238,0.12)] ${
-                                isDark
-                                    ? 'border-slate-700 bg-slate-900/50'
-                                    : 'border-slate-300 bg-white shadow-sm'
-                            }`}
-                            style={{ animationDelay: `${index * 0.15}s` }}
-                        >
-                            <img
-                                src={skill.icon}
-                                alt={skill.name}
-                                width={64}
-                                height={64}
-                                className="mx-auto h-14 w-14 object-contain transition-transform duration-300 group-hover:scale-110"
-                            />
-                            <p className={`mt-3 text-sm font-semibold transition-colors duration-300 ${
-                                isDark ? 'text-slate-100 group-hover:text-cyan-300' : 'text-slate-900 group-hover:text-cyan-600'
-                            }`}>{skill.name}</p>
-                        </div>
-                    ))}
-                </div>
-
-                {/* Desktop: Horizontal Scrolling Row */}
-                <div className="hidden lg:block mt-8">
-                    <div className={`overflow-x-auto pb-2 ${
-                        isDark
-                            ? '[&::-webkit-scrollbar]:h-2 [&::-webkit-scrollbar-track]:bg-slate-800 [&::-webkit-scrollbar-thumb]:bg-slate-600 [&::-webkit-scrollbar-thumb]:rounded-full hover:[&::-webkit-scrollbar-thumb]:bg-slate-500'
-                            : '[&::-webkit-scrollbar]:h-2 [&::-webkit-scrollbar-track]:bg-slate-200 [&::-webkit-scrollbar-thumb]:bg-slate-400 [&::-webkit-scrollbar-thumb]:rounded-full hover:[&::-webkit-scrollbar-thumb]:bg-slate-500'
-                    }`}>
-                        <div className="flex gap-4 min-w-full">
-                            {skills.map((skill, index) => (
-                                <div
-                                    key={skill.name}
-                                    className={`float-animate group flex-shrink-0 rounded-xl border p-4 text-center transition-all duration-300 hover:-translate-y-2 hover:border-cyan-400/60 hover:shadow-[0_12px_35px_rgba(34,211,238,0.12)] w-32 ${
-                                        isDark
-                                            ? 'border-slate-700 bg-slate-900/50'
-                                            : 'border-slate-300 bg-white shadow-sm'
-                                    }`}
-                                    style={{ animationDelay: `${index * 0.15}s` }}
-                                >
-                                    <img
-                                        src={skill.icon}
-                                        alt={skill.name}
-                                        width={64}
-                                        height={64}
-                                        className="mx-auto h-14 w-14 object-contain transition-transform duration-300 group-hover:scale-110"
-                                    />
-                                    <p className={`mt-3 text-sm font-semibold transition-colors duration-300 ${
-                                        isDark ? 'text-slate-100 group-hover:text-cyan-300' : 'text-slate-900 group-hover:text-cyan-600'
-                                    }`}>{skill.name}</p>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
+                <div className="mt-8">
+                    <Marquee pauseOnHover speed={40} gradient={false}>
+                        {skills.map((skill, index) => (
+                            <div
+                                key={skill.name}
+                                className={`float-animate group mx-2 w-32 rounded-xl border p-4 text-center transition-all duration-300 hover:-translate-y-2 hover:border-cyan-400/60 hover:shadow-[0_12px_35px_rgba(34,211,238,0.12)] ${
+                                    isDark
+                                        ? 'border-slate-700 bg-slate-900/50'
+                                        : 'border-slate-300 bg-white shadow-sm'
+                                }`}
+                                style={{ animationDelay: `${index * 0.15}s` }}
+                            >
+                                <img
+                                    src={skill.icon}
+                                    alt={skill.name}
+                                    width={64}
+                                    height={64}
+                                    className="mx-auto h-14 w-14 object-contain transition-transform duration-300 group-hover:scale-110"
+                                />
+                                <p className={`mt-3 text-sm font-semibold transition-colors duration-300 ${
+                                    isDark ? 'text-slate-100 group-hover:text-cyan-300' : 'text-slate-900 group-hover:text-cyan-600'
+                                }`}>{skill.name}</p>
+                            </div>
+                        ))}
+                    </Marquee>
                 </div>
             </div>
         </section>

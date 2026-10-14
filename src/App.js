@@ -32,7 +32,7 @@ function AppContent() {
     <div 
       className="relative overflow-x-hidden transition-colors duration-300"
       style={{
-        backgroundImage: `url(${isDark ? darkBg : lightBg})`,
+        
         backgroundSize: 'cover',
         backgroundAttachment: 'fixed',
         backgroundPosition: 'center'
