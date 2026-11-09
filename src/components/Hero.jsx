@@ -32,11 +32,11 @@ const Hero = () => {
           }`}>
             <TypeAnimation
               sequence={[
-                'Mobile App Developer',
+                'Associate Mobile App Developer',
                 1200,
-                'Software Engineer',
+                'Flutter Developer',
                 1200,
-                'Creative Problem Solver',
+                'Web Developer',
                 1200,
               ]}
               wrapper="span"
@@ -72,7 +72,7 @@ const Hero = () => {
           <p className={`text-base sm:text-lg my-6 max-w-2xl leading-relaxed transition-colors duration-300 ${
             isDark ? 'text-slate-300' : 'text-slate-200'
           }`}>
-Passionate about creating innovative mobile and web applications that solve real-world problems.
+I build cross-platform Flutter apps, including AI features and language-learning experiences, and bring additional full-stack experience with React, Next.js, and Node.js.
           </p>
 
           <div className="my-8 flex flex-wrap gap-4">

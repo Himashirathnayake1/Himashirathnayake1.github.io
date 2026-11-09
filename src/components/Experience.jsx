@@ -16,13 +16,12 @@ const Experience = () => {
             <div className="flex items-start gap-4">
               <div className="text-3xl text-amber-400 transition-transform duration-300 group-hover:scale-110"><FaBriefcase /></div>
               <div>
-                <h3 className="text-xl font-bold transition-colors duration-300 group-hover:text-cyan-300">Intern Software Engineer — Shield Technologies (Pvt) Ltd</h3>
+                <h3 className="text-xl font-bold transition-colors duration-300 group-hover:text-cyan-300">Mobile Developer Intern — Shield Technologies (Pvt) Ltd</h3>
                 <p className="text-sm text-slate-400">2025</p>
                 <ul className="mt-3 list-disc list-inside text-slate-300 space-y-1">
-                  <li>Worked on responsive mobile applications.</li>
-                  <li>Built and improved user-facing features using Flutter, Firebase.</li>
-                  <li>Collaborated with the team on UI/UX enhancements and application debugging.</li>
-                  <li>Gained hands-on experience in full-stack development and project collaboration.</li>
+                  <li>Developed Flutter apps with responsive interfaces, dynamic theming, and Firebase integration.</li>
+                  <li>Contributed to BeautyQatar and Rimotkiii.</li>
+                  <li>Collaborated through GitHub, Figma prototyping, and structured documentation.</li>
                 </ul>
               </div>
             </div>
@@ -32,14 +31,11 @@ const Experience = () => {
             <div className="flex items-start gap-4">
               <div className="text-3xl text-amber-400 transition-transform duration-300 group-hover:scale-110"><FaBriefcase /></div>
               <div>
-                <h3 className="text-xl font-bold transition-colors duration-300 group-hover:text-cyan-300">Intern Software Engineer — Ideacipher (Pvt) Ltd</h3>
-                <p className="text-sm text-slate-400">2025 — 2026</p>
+                <h3 className="text-xl font-bold transition-colors duration-300 group-hover:text-cyan-300">Mobile Developer Intern — Ideacipher (Pvt) Ltd</h3>
+                <p className="text-sm text-slate-400">2026</p>
                 <ul className="mt-3 list-disc list-inside text-slate-300 space-y-1">
-                  <li>Developed and maintained cross-platform mobile applications using Flutter.</li>
-                  <li>Integrated Firebase services (Authentication, Firestore, Analytics).</li>
-                  <li>Worked with REST APIs and third-party integrations (Agora, Deepgram, Gemini).</li>
-                  <li>Improved UI/UX, app performance and responsiveness.</li>
-                  <li>Collaborated with team members on feature development and deployments.</li>
+                  <li>Developed and maintained cross-platform Flutter applications integrated with REST APIs.</li>
+                  <li>Integrated Firebase services and AI voice features using Agora RTC, Deepgram, and Gemini LLM.</li>
                 </ul>
               </div>
             </div>

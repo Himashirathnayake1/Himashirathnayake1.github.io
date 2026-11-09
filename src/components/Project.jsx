@@ -8,7 +8,7 @@ const Project = () => {
     <section className="max-w-[1200px] mx-auto px-4 my-10" id="project">
       <div className="pb-8" data-aos="fade-up">
 
-        <h2 className="display-font text-3xl md:text-4xl mt-2 font-bold primary-color">Featured Projects</h2>
+        <h2 className="display-font text-3xl md:text-4xl mt-2 font-bold primary-color">Projects</h2>
        
       </div>
 
@@ -31,6 +31,9 @@ const Project = () => {
               <h3 className="display-font text-2xl font-bold text-slate-100 transition-colors duration-300 group-hover:text-cyan-300">
                 {project.title}
               </h3>
+              {project.organization && (
+                <p className="text-sm text-slate-400 mt-1">{project.organization}</p>
+              )}
               <p className="text-slate-300 mt-3 leading-relaxed">{project.description}</p>
 
               <div className="flex flex-wrap gap-2 mt-4">
@@ -45,7 +48,7 @@ const Project = () => {
               </div>
 
               <div className="pt-6 flex flex-wrap gap-3">
-                {project.live ? (
+                {project.live && (
                   <a
                     href={project.live}
                     target="_blank"
@@ -54,22 +57,23 @@ const Project = () => {
                   >
                     Live
                   </a>
-                ) : (
-                  <Link
-                    to={`/project/${project.slug}`}
-                    className="rounded-lg px-4 py-2 bg-slate-100 text-slate-900 font-semibold transition-all duration-300 hover:-translate-y-0.5 hover:bg-white hover:shadow-lg hover:shadow-slate-900/30"
-                  >
-                    Live
-                  </Link>
                 )}
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="rounded-lg px-4 py-2 bg-gradient-to-r from-amber-400 via-orange-300 to-cyan-400 text-slate-900 font-bold transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-cyan-500/30"
+                <Link
+                  to={`/project/${project.slug}`}
+                  className="rounded-lg px-4 py-2 bg-slate-100 text-slate-900 font-semibold transition-all duration-300 hover:-translate-y-0.5 hover:bg-white hover:shadow-lg hover:shadow-slate-900/30"
                 >
-                  GitHub
-                </a>
+                  Details
+                </Link>
+                {project.github && (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="rounded-lg px-4 py-2 bg-gradient-to-r from-amber-400 via-orange-300 to-cyan-400 text-slate-900 font-bold transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-cyan-500/30"
+                  >
+                    GitHub
+                  </a>
+                )}
               </div>
             </div>
           </article>
